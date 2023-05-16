@@ -12,6 +12,9 @@ const SocketHandler = (req, res) => {
         socket.on('canvas-change', canvas => {
             socket.broadcast.emit('update-canvas', canvas)
         })
+        socket.on('color-change', color => {
+          socket.broadcast.emit('update-color', color)
+        })
     })
   }
   res.end()

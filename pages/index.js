@@ -10,6 +10,7 @@ const Home = () => {
 
   const [input, setInput] = useState('')
 
+
   const socketInitializer = async () => {
     await fetch('/api/socket')
     socket = io()
